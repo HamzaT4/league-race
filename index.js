@@ -25,9 +25,13 @@ var x = setInterval(function() {
 
 async function getId() {
 
- const response3 = await fetch("https://eun1.api.riotgames.com/lol/league/v4/entries/by-summoner/HCn8bAfvK2O4b1gAKCXzHvHa_n0BkveUJme2TNMkTebtWzkbUjkyCSaz5A?api_key=RGAPI-e9a85045-dcf8-4aea-b232-79f0d674537d");
+ const response3 = await fetch("https://eun1.api.riotgames.com/lol/league/v4/entries/by-summoner/HCn8bAfvK2O4b1gAKCXzHvHa_n0BkveUJme2TNMkTebtWzkbUjkyCSaz5A?api_key=RGAPI-7a868080-7d49-4578-8b17-c06d6cbdfc66", {
+    mode: 'cors'
+  });
  const data3 = await response3.json();
- const response4 =await fetch("https://na1.api.riotgames.com/lol/league/v4/entries/by-summoner/DCDMwLJe8g-1AOmM0znpdZC6gRlMhBw3zKEdL-xkPGTHOPtF9b6AXutl_w?api_key=RGAPI-e9a85045-dcf8-4aea-b232-79f0d674537d");
+ const response4 =await fetch("https://na1.api.riotgames.com/lol/league/v4/entries/by-summoner/DCDMwLJe8g-1AOmM0znpdZC6gRlMhBw3zKEdL-xkPGTHOPtF9b6AXutl_w?api_key=RGAPI-7a868080-7d49-4578-8b17-c06d6cbdfc66", {
+    mode: 'cors'
+  });
  const data4 = await response4.json()
  const hamzaData = data3[1]
 const kareemData = data4[0] 

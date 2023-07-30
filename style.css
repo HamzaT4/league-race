@@ -1,61 +1,76 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap');
-body{
-    height: 100vh;
-    width: 100vw;
-    padding: 2rem;
+
+body {
+    display: flex;
+    flex: auto;
     background-color: #121212;
+    overflow-x: hidden;
+    margin: 0;
 }
-*{
+
+body, html {
+    height: 100%;
+    padding: 0;
+}
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-.rank-icon{
+
+.rank-icon {
     width: 8rem;
-    
 }
-.zac ,.jhin{
+
+.zac, .jhin {
     height: 20rem;
-    width: 35rem;
+    max-width: 35rem;
     border-radius: 25px;
+    height: auto;
 }
 
-.hamza-container,.kareem-container{
-
+.hamza-container, .kareem-container {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
-.main-container{
-    display: flex;
-    
-    justify-content: center;
+.main-container {
+    display: grid; /* Change display to grid */
+    grid-template-columns: 2fr 1fr 2fr; /* Create a two-column layout */
+    gap: 2rem; /* Add gap between columns */
+    justify-items: center; /* Center the content horizontally in each column */
+    align-items: center; /* Center the content vertically */
+    height: 100%;
+    overflow: auto;
 }
-h2{
+
+h2 {
     color: whitesmoke;
     font-family: 'Anton', sans-serif;
     text-align: center;
 }
-h3{
+
+h3 {
     color: whitesmoke;
     font-family: 'Bebas Neue', sans-serif;
-        text-align: center;
+    text-align: center;
     font-size: xx-large;
-    
 }
-.vs{
-    
-   
+
+.vs {
     width: 10rem;
     height: 10rem;
 }
-.k-wr-txt,.h-wr-txt{
-    letter-spacing:2px;
+
+.k-wr-txt, .h-wr-txt {
+    letter-spacing: 2px;
 }
-.timer{
+
+.timer {
     width: 90%;
     color: antiquewhite;
     display: flex;
@@ -64,7 +79,8 @@ h3{
     text-align: center;
     font-size: 1.4rem;
 }
-.mid{
+
+.mid {
     font-family: 'Anton', sans-serif;
     display: flex;
     flex-direction: column;
