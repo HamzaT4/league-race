@@ -3,6 +3,7 @@
 body {
     display: flex;
     flex: auto;
+    justify-content: center;
     background-color: #121212;
     overflow-x: hidden;
     margin: 0;
@@ -11,6 +12,8 @@ body {
 body, html {
     height: 100%;
     padding: 0;
+    width: 100vw;
+
 }
 
 * {
@@ -24,10 +27,10 @@ body, html {
 }
 
 .zac, .jhin {
-    height: 20rem;
-    max-width: 35rem;
+    
+    max-width: 100%;
     border-radius: 25px;
-    height: auto;
+   min-height: 100%;
 }
 
 .hamza-container, .kareem-container {
@@ -36,16 +39,69 @@ body, html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    max-width: 90%;
+    min-height: 80%;
 }
 
 .main-container {
     display: grid; /* Change display to grid */
-    grid-template-columns: 2fr 1fr 2fr; /* Create a two-column layout */
+    grid-template-columns: 45% 15% 45%; /* Create a two-column layout */
     gap: 2rem; /* Add gap between columns */
     justify-items: center; /* Center the content horizontally in each column */
     align-items: center; /* Center the content vertically */
     height: 100%;
-    overflow: auto;
+    width: 100%;
+    
+    
+}
+/* Styles for small screens */
+@media (max-width: 768px) {
+    .main-container {
+        grid-template-columns: 100%; /* Single column layout for small screens */
+    }
+
+    .zac,
+    .jhin {
+        width: 7%; /* Expand images to fill the column width */
+        height: auto; /* Allow images to scale proportionally */
+    }
+
+    .hamza-container,
+    .kareem-container {
+        min-height: auto; /* Allow containers to adjust based on content */
+    }
+    .vs {
+        max-width: 40%;
+        height: auto;
+    }
+    
+}
+
+/* Styles for medium to large screens */
+@media (min-width: 769px) {
+    .main-container {
+        display: flex; /* Change back to display flex */
+        flex-wrap: wrap; /* Wrap items to new line when there's not enough space */
+        justify-content: center;
+    }
+
+    .main-container > div {
+        flex: 1; /* Each column takes equal width */
+        max-width: 30%; /* Limit the width of each column */
+        
+    }
+    
+
+    .zac,
+    .jhin {
+        width: 100%; /* Expand images to fill the column width */
+        height: auto; /* Allow images to scale proportionally */
+    }
+
+    .vs {
+        max-width: 50%;
+        height: auto;
+    }
 }
 
 h2 {
@@ -62,14 +118,25 @@ h3 {
 }
 
 .vs {
-    width: 10rem;
-    height: 10rem;
+    width: 80%;
+    height: 80%;
 }
 
 .k-wr-txt, .h-wr-txt {
     letter-spacing: 2px;
 }
-
+.user-name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+}
+.live-ham, .live-kar{
+    width: 2rem;
+    visibility: hidden;
+    
+}
 .timer {
     width: 90%;
     color: antiquewhite;
