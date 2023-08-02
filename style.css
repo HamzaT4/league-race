@@ -59,10 +59,14 @@ body, html {
     .main-container {
         grid-template-columns: 100%; /* Single column layout for small screens */
     }
+    .main-container > div {
+       margin: 2rem;
+        
+    }
 
     .zac,
     .jhin {
-        width: 7%; /* Expand images to fill the column width */
+        width: 80%; /* Expand images to fill the column width */
         height: auto; /* Allow images to scale proportionally */
     }
 
@@ -131,10 +135,11 @@ h3 {
     justify-content: center;
     gap: 1rem;
     width: 100%;
+    padding-left: 1rem;
 }
 .live-ham, .live-kar{
     width: 2rem;
-    visibility: hidden;
+
     
 }
 .timer {
