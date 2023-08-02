@@ -139,7 +139,7 @@ h3 {
 }
 .live-ham, .live-kar{
     width: 2rem;
-
+    visibility: hidden;
     
 }
 .timer {
