@@ -45,7 +45,7 @@ async function getId() {
     mode: 'cors'
   });
   try {
-    const ingameResHam= await fetch("https://eun1.api.riotgames.com/lol/spectator/v4/active-games/by-summoner/p0c9VEA1ly79ybyAPiyHipbqLj4xSHYSAa2Xgo5YVU-_k6nc?api_key=RGAPI-a5ac701e-9222-4068-b476-e4a1d591acbc", {
+    const ingameResHam= await fetch("https://eun1.api.riotgames.com/lol/spectator/v4/active-games/by-summoner/-c9IwmnMpEYKhW8CeHyr64UFqxTqn7EJMrDQa_jZUHskAJbRXGHeZx1Dbg?api_key=RGAPI-a5ac701e-9222-4068-b476-e4a1d591acbc", {
     mode: 'cors'
   });
     showIngame("hamza")
@@ -64,7 +64,10 @@ async function getId() {
 
 
 const data4 = await response4.json();
-const hamzaData = data3[1]
+
+const hamzaData = data3.filter(rank=>{
+  return rank.queueType=="RANKED_SOLO_5x5";
+})[0];
 const kareemData = data4[0] 
 const hamTier = document.createElement("img");
 const karTier = document.createElement("img");
